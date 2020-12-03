@@ -1,0 +1,50 @@
+ 
+  <form (submit)="onOrganizeTeam(teamForm)" #teamForm="ngForm">
+    <select name="firstplayer" ngModel #firstplayer="ngModel">
+      <option *ngFor="let fplayer of firstPlayer" [value]="fplayer.user">{{fplayer.user}} - {{ fplayer.team}}</option>
+    </select>
+    <select name="secondplayer" ngModel #secondplayer="ngModel">
+        <option *ngFor="let splayer of secondPlayer" [value]="splayer.user">{{splayer.user}} - {{ splayer.team}}</option>
+    </select>
+    <select name="team" ngModel #team="ngModel">
+        <option *ngFor="let team of teams" [value]="team.team">{{team.team}}</option>
+    </select>
+    <input type="text" name="score" ngModel #score="ngModel">
+    <button type="submit">Create New Team</button>
+  </form>
+ 
+
+<!-- 
+  <form (submit)="onAddTeam(teamForm)" #teamForm="ngForm">    
+    <input      
+      type="text"
+      name="team"
+      ngModel    
+      minlength="3"
+      placeholder="Team Name"
+      >  
+      
+    <input            
+      name="score"
+      ngModel    
+      placeholder="Score"
+      >
+      
+      <input            
+      name="fname"
+      ngModel    
+      placeholder="First Player"
+      >
+
+      <input            
+      name="sname"
+      ngModel    
+      placeholder="Second Player"
+      >
+      
+  <button *ngIf="userIsAuthenticated"    
+    color="accent"
+    type="submit">Save team</button>
+    
+</form>
+ -->

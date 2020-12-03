@@ -1,0 +1,57 @@
+Create New Team:
+<app-signup-teams></app-signup-teams>
+<br>
+OR:
+<br><br>
+Signup in One Of Existing Team:
+  <form (submit)="onSignup(SignupForm)" #SignupForm="ngForm" >    
+    <input      
+      type="email"
+      name="email"
+      ngModel
+      #email="ngModel"    
+      minlength="3"
+      placeholder="email"
+      required email
+      >  
+      <input      
+      type="user"
+      name="user"
+      ngModel
+      #user="ngModel"    
+      minlength="3"
+      placeholder="User Name"      
+      required user
+      >  
+
+    <input            
+      name="password"
+      type="password"
+      ngModel    
+      #password="ngModel"
+      placeholder="Password"
+      required
+      >
+      
+      <select 
+      name="team"
+      ngModel
+      #team="ngModel">
+        <option 
+          *ngFor="let team of teams" 
+          [value]="team.team"          
+          >{{team.team}}
+          
+        </option>        
+      </select>
+
+      <p *ngIf="email.invalid">Please enter the email</p>
+      <p *ngIf="password.invalid">Please enter the password</p>
+      
+  <button    
+    color="accent"
+    type="submit">Register</button>
+    
+</form>
+
+<app-footer></app-footer>

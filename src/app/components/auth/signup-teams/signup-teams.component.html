@@ -1,0 +1,14 @@
+
+<form (submit)="onAddTeam(teamForm)" #teamForm="ngForm">
+<label>Team Name: </label>
+<input 
+  type="text"
+  name="team"
+  ngModel
+  #teamName="ngModel"  
+  >    
+<input 
+  type="submit" 
+  value="Create Team"
+  > 
+</form>    

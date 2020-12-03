@@ -1,0 +1,10 @@
+<a routerLink="/">Home</a>
+
+<!-- Admin -->
+<a routerLink="/teams" *ngIf="userIsAuthenticated">teams</a>
+<a routerLink="/match" *ngIf="userIsAuthenticated">Match</a>
+
+<!-- Users -->
+<a routerLink="/login" *ngIf="!userIsAuthenticated">login</a>
+<a routerLink="/signup" *ngIf="!userIsAuthenticated">signup</a>
+<button (click)="onLogout()" *ngIf="userIsAuthenticated">Logout</button>    

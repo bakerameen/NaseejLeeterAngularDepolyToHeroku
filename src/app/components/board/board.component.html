@@ -1,0 +1,23 @@
+<div class="borad-container">
+  <!-- Timer -->
+  <div class="time">
+    <countdown class="countdown" #cd [config]="{leftTime: 5, demand: true}"></countdown>
+    <button (click)="cd.resume()">Resume</button>
+    <button (click)="cd.restart()">Stop</button>
+  </div>
+  <!-- Board -->
+  <div class="board">
+    <div id="hexGrid">
+      <div class="hexCrop">
+        <div class="hexGrid">
+          <div class="hex" *ngFor="let board of Boards">
+            <span >{{board.letter}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- Competetion Logo -->
+  <div class="c-logo"></div>
+</div>

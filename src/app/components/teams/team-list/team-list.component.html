@@ -1,0 +1,20 @@
+<div *ngFor="let organizedTeam of organizedTeams">
+  {{organizedTeam.team}} -
+  {{organizedTeam.firstPlayer}} -
+  {{organizedTeam.secondPlayer}} -
+  {{organizedTeam.score}} -
+  <button *ngIf="userIsAuthenticated" (click)="onAddMatch(organizedTeam)">Add To Match</button></div>
+
+<!-- <div *ngFor="let club of clubs">
+  <p>{{ club.user}} - {{ club.team}}</p>
+   -->
+
+
+
+        <!-- <button *ngIf="userIsAuthenticated">EDIT</button>
+        <button *ngIf="userIsAuthenticated" (click)="onDelete(club.id)">DELETE</button>
+        <button *ngIf="userIsAuthenticated" (click)="onAddMatch(club)">Add To Match</button> -->
+
+        <!-- <button *ngIf="userIsAuthenticated" (click)="onCreateTeam(club)">Create Team</button> -->
+
+      <!-- </div>   -->

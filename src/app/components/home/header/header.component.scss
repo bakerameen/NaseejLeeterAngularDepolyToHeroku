@@ -1,0 +1,60 @@
+.header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.brand {
+  flex-grow: 1;
+  align-self: flex-start;
+}
+.brand  {
+  img {
+  height: 30px;
+}
+}
+.teams-continer {
+  flex-grow: 20;
+
+  align-self: center;
+  text-align: center;
+
+  border: 0px solid #0b122e;;
+border-radius: 10px;
+
+-webkit-box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.4);
+box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.4);
+-webkit-transition: all 0.3s ease-in;
+-o-transition: all 0.3s ease-in;
+transition: all 0.3s ease-in;
+border: 1px solid #0b122e; padding: 10px; height: 60px;
+border-top:green calc(2px + 0.1vw) solid ;
+  border-bottom:red calc(2px + 0.1vw) solid ;
+  border-right:green calc(2px + 0.1vw) solid ;
+  border-left:red calc(2px + 0.1vw) solid ;
+
+}
+
+
+.c-logo {
+  flex-grow: 1;
+
+  align-self: flex-end;
+  text-align: end;
+  padding-right: 5px;
+}
+.c-logo span {
+  color: #b40c1f;
+}
+
+.c-logo span:first-child {
+  color: #fff;
+  margin-left: 5px;
+}
+
+button:disabled,
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+  cursor : none;
+}
